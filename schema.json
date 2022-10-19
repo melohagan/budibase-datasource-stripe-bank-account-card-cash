@@ -1,0 +1,114 @@
+{
+  "type": "datasource",
+  "metadata": {},
+  "schema": {
+    "docs": "https://stripe.com/docs/api/customer_bank_accounts?lang=node",
+    "friendlyName": "Stripe bank accounts + cards",
+    "type": "API",
+    "description": "Manage Stripe bank accounts and cards",
+    "datasource": {
+      "apiKey": {
+        "type": "password",
+        "required": true
+      }
+    },
+    "query": {
+      "create": {
+        "type": "fields",
+        "fields": {
+          "customer": {
+            "type": "string",
+            "required": true
+          },
+          "source": {
+            "type": "sting",
+            "required": true
+          }
+        }
+      },
+      "read": {
+        "type": "fields",
+        "fields": {
+          "id": {
+            "type": "string",
+            "required": true
+          },
+          "customer": {
+            "type": "string",
+            "required": true
+          }
+        }
+      },
+      "update": {
+        "type": "fields",
+        "fields": {
+          "id": {
+            "type": "string",
+            "required": true
+          },
+          "customer": {
+            "type": "string",
+            "required": true
+          },
+          "body": {
+            "type": "json",
+            "required": true
+          }
+        }
+      },
+      "delete": {
+        "type": "fields",
+        "fields": {
+          "id": {
+            "type": "string",
+            "required": true
+          },
+          "customer": {
+            "type": "string",
+            "required": true
+          }
+        }
+      },
+      "list": {
+        "type": "fields",
+        "fields": {
+          "customer": {
+            "type": "string",
+            "required": true
+          },
+          "object": {
+            "type": "string",
+            "required": true
+          },
+          "endingBefore": {
+            "display": "Ending before",
+            "type": "string",
+            "required": false
+          },
+          "startingAfter": {
+            "display": "Starting after",
+            "type": "string",
+            "required": false
+          },
+          "limit": {
+            "type": "number",
+            "required": false
+          }
+        }
+      },
+      "verify": {
+        "type": "fields",
+        "fields": {
+          "id": {
+            "type": "string",
+            "required": true
+          },
+          "customer": {
+            "type": "string",
+            "required": true
+          }
+        }
+      }
+    }
+  }
+}
