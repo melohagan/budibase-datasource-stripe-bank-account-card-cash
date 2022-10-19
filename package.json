@@ -1,7 +1,7 @@
 {
   "name": "stripe-bank-account-card-datasource",
   "version": "1.0.0",
-  "description": "Manage Stripe bank accounts and cards",
+  "description": "Manage Stripe bank accounts, cash balance and cards",
   "main": "src/index.ts",
   "license": "MIT",
   "scripts": {

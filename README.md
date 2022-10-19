@@ -3,7 +3,7 @@
 Official Stripe docs here: https://stripe.com/docs/api/customer_bank_accounts?lang=node
 
 # Description
-Manage Stripe bank accounts and cards
+Manage Stripe bank accounts, cash balance and cards
 
 Find out more about [Budibase](https://github.com/Budibase/budibase).
 

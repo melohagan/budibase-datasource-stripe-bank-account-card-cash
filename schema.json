@@ -3,9 +3,9 @@
   "metadata": {},
   "schema": {
     "docs": "https://stripe.com/docs/api/customer_bank_accounts?lang=node",
-    "friendlyName": "Stripe bank accounts + cards",
+    "friendlyName": "Stripe bank accounts + cards + cash balance",
     "type": "API",
-    "description": "Manage Stripe bank accounts and cards",
+    "description": "Manage Stripe bank accounts, cash balance and cards",
     "datasource": {
       "apiKey": {
         "type": "password",
@@ -106,6 +106,42 @@
           "customer": {
             "type": "string",
             "required": true
+          }
+        }
+      },
+      "retrieveCashBalance": {
+        "type": "fields",
+        "fields": {
+          "customer": {
+            "type": "string",
+            "required": true
+          }
+        }
+      },
+      "listCashBalanceTransactions": {
+        "type": "fields",
+        "fields": {
+          "customer": {
+            "type": "string",
+            "required": true
+          },
+          "transactionId": {
+            "type": "string",
+            "required": false
+          },
+          "endingBefore": {
+            "display": "Ending before",
+            "type": "string",
+            "required": false
+          },
+          "startingAfter": {
+            "display": "Starting after",
+            "type": "string",
+            "required": false
+          },
+          "limit": {
+            "type": "number",
+            "required": false
           }
         }
       }

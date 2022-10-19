@@ -38,6 +38,21 @@ class CustomIntegration implements IntegrationBase {
   async verify(query: { customer: string; id: string; }) {
     return await this.stripe.customers.verifySource(query.customer, query.id)
   }
+
+  async retrieveCashBalance(query: { customer: string; }) {
+    return await this.stripe.customers.retrieveCashBalance(query.customer)
+  }
+
+  async listCashBalanceTransactions(query: { customer: string; transactionId: string; limit: number; endingBefore: string; startingAfter: string;  }) {
+    if (query.transactionId) {
+      return await this.stripe.customers.retrieveCashBalanceTransaction(query.customer, query.transactionId)
+    }
+    return await this.stripe.customers.listCashBalanceTransactions(query.customer, {
+      ending_before: query.endingBefore,
+      starting_after: query.startingAfter,
+      limit: query.limit
+    })
+  }
 }
 
 export default CustomIntegration
