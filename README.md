@@ -1,13 +1,17 @@
-# Stripe Bank account and Card datasource
+# Deprecated
+
+Use the official Stripe [REST Template](https://docs.budibase.com/docs/rest-templates) instead!
+
+### Stripe Bank account and Card datasource
 
 Official Stripe docs here: https://stripe.com/docs/api/customer_bank_accounts?lang=node
 
-# Description
+### Description
 Manage Stripe bank accounts, cash balance and cards
 
 Find out more about [Budibase](https://github.com/Budibase/budibase).
 
-## Instructions
+#### Instructions
 
 To build your new  plugin run the following in your Budibase CLI:
 ```
